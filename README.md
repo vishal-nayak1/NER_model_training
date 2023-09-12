@@ -29,12 +29,14 @@ Parameters: <br>
 2. Open and run LayoutLMv1_training_script.ipynb notebook cells sequentially. <br>
 3. Change following directories path in notebook cells:<br>
 * __Labels.txt file directory__ - <br>
-  * labels = get_labels("/content/drive/My Drive/aws_annotation/data/labels.txt") <br>
+  * line- <br>
+    labels = get_labels("/content/drive/My Drive/aws_annotation/data/labels.txt") <br>
   
   * please follow this link - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=PIjINVaNRl8Jline=14&uniqifier=1 <br>
   
 * __Data directory__ - <br>
-  * args = {'local_rank': -1, <br>
+  * line - <br>
+    args = {'local_rank': -1, <br>
   'overwrite_cache': True, <br>
   'data_dir': '/content/drive/MyDrive/aws_annotation/data', <br>
   'model_name_or_path':'microsoft/layoutlm-base-uncased', <br>
@@ -44,7 +46,8 @@ Parameters: <br>
   * please follow this link - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=9cBBA_ws0rTZ&line=5&uniqifier=1 <br>
 
 * __Model checkpoints and output directory__ - <br>
-    * best_model = f'models/checkpointLM1_epoch{epoch}.pt' <br>
+    * line - <br>
+    best_model = f'models/checkpointLM1_epoch{epoch}.pt' <br>
     for ckpt in os.listdir('models'): <br>
     if 'checkpointLM1_epoch' in ckpt: <br>
     	os.remove(f'models/{ckpt}') <br>
