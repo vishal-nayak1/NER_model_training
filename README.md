@@ -30,30 +30,30 @@ Parameters: <br>
 3. Change following directories path in notebook cells:<br>
 * __Labels.txt file directory__ - <br>
   * line- <br>
-    labels = get_labels("/content/drive/My Drive/aws_annotation/data/labels.txt") <br>
+    _labels = get_labels("/content/drive/My Drive/aws_annotation/data/labels.txt")_ <br>
   
   * please follow this link - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=PIjINVaNRl8Jline=14&uniqifier=1 <br>
   
 * __Data directory__ - <br>
   * line - <br>
-    args = {'local_rank': -1, <br>
+    _args = {'local_rank': -1, <br>
   'overwrite_cache': True, <br>
   'data_dir': '/content/drive/MyDrive/aws_annotation/data', <br>
   'model_name_or_path':'microsoft/layoutlm-base-uncased', <br>
   'max_seq_length': 512, <br>
-  'model_type': 'layoutlm',} <br>
+  'model_type': 'layoutlm',}_ <br>
   
   * please follow this link - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=9cBBA_ws0rTZ&line=5&uniqifier=1 <br>
 
 * __Model checkpoints and output directory__ - <br>
     * line - <br>
-    best_model = f'models/checkpointLM1_epoch{epoch}.pt' <br>
+    _best_model = f'models/checkpointLM1_epoch{epoch}.pt' <br>
     for ckpt in os.listdir('models'): <br>
     if 'checkpointLM1_epoch' in ckpt: <br>
     	os.remove(f'models/{ckpt}') <br>
     if not os.path.exists(f'results/v1'): <br>
         os.mkdir(f'results/v1') <br>
-        df.to_csv(f'results/v1/log_v1_FUNSD_{test_mode}_run{run}.csv', index = False) <br>
+        df.to_csv(f'results/v1/log_v1_FUNSD_{test_mode}_run{run}.csv', index = False)_ <br>
     
     * please follow this link - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=JXsd7u37jPud&line=166&uniqifier=1  <br>
     
