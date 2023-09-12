@@ -5,17 +5,17 @@ Please follow below instructions to Train NER model on training/testing files:
 
 ### SCRIPT MODE
 	
-1. Make sure all these files are present in your data directory (train.txt, train_box.txt, train_image.txt, test.txt, test_box.txt, test_image.txt, labels.txt) <br>
+1. Make sure all these files are present in your data directory _(train.txt, train_box.txt, train_image.txt, test.txt, test_box.txt, test_image.txt, labels.txt)_ <br>
 
 2. Run following command to train NER model for python script based: <br>
-!python ./train.py --epochs=5 --data_dir='./data' --output_dir='./out' --train_batch_size=4 --eval_batch_size=4 --checkpoint_model_path='./output/checkpoints/' <br>
+_!python ./train.py --epochs=5 --data_dir='./data' --output_dir='./out' --train_batch_size=4 --eval_batch_size=4 --checkpoint_model_path='./output/checkpoints/'_ <br>
 Parameters: <br>
-* Epochs - Number of epochs to train model <br>
-* data_dir - data directory where training and test files are present(train.txt, train_box.txt, train_image.txt, test.txt, test_box.txt, test_image.txt, labels.txt) <br>
-* output_dir - output directory where all model output files are stored like model checkpoint, model metrics on test data, best model checkpoint used for inference/deployment. <br>
-* train_batch_size - train batch size (Adjust as per GPU memory) <br>
-* eval_batch_size - test batch size (Adjust as per GPU memory) <br>
-* Checkpoint_model_path - pass last model checkpoint files to start model training from this checkpoint <br>
+* _epochs_ - Number of epochs to train model <br>
+* _data_dir_ - data directory where training and test files are present _(train.txt, train_box.txt, train_image.txt, test.txt, test_box.txt, test_image.txt, labels.txt)_ <br>
+* _output_dir_ - output directory where all model output files are stored like model checkpoint, model metrics on test data, best model checkpoint used for inference/deployment. <br>
+* _train_batch_size_ - train batch size (Adjust as per GPU memory) <br>
+* _eval_batch_size_ - test batch size (Adjust as per GPU memory) <br>
+* _checkpoint_model_path_ - pass last model checkpoint files to start model training from this checkpoint <br>
 
 #### Note: <br>
  * Please refer to this link for demonstration - https://drive.google.com/drive/u/2/folders/1tyWBXTPJjSQGGN9O5Cm-5OJow4Nzorp7 <br>
