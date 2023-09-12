@@ -29,22 +29,22 @@ Parameters: <br>
 2. Open and run LayoutLMv1_training_script.ipynb notebook cells sequentially. <br>
 3. Change following directories path in notebook cells:<br>
 * Labels.txt file directory- <br>
-  ** labels = get_labels("/content/drive/My Drive/aws_annotation/data/labels.txt") <br>
+  * labels = get_labels("/content/drive/My Drive/aws_annotation/data/labels.txt") <br>
   
-  ** please follow this link to refer - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=PIjINVaNRl8Jline=14&uniqifier=1 <br>
+  * please follow this link to refer - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=PIjINVaNRl8Jline=14&uniqifier=1 <br>
   
 * Data directory - <br>
-  ** args = {'local_rank': -1, <br>
+  * args = {'local_rank': -1, <br>
   'overwrite_cache': True, <br>
   'data_dir': '/content/drive/MyDrive/aws_annotation/data', <br>
   'model_name_or_path':'microsoft/layoutlm-base-uncased', <br>
   'max_seq_length': 512, <br>
   'model_type': 'layoutlm',} <br>
   
-  **please follow this link to refer - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=9cBBA_ws0rTZ&line=5&uniqifier=1 <br>
+  * please follow this link to refer - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=9cBBA_ws0rTZ&line=5&uniqifier=1 <br>
 
 * Model checkpoints and output directory - <br>
-    ** best_model = f'models/checkpointLM1_epoch{epoch}.pt' <br>
+    * best_model = f'models/checkpointLM1_epoch{epoch}.pt' <br>
     for ckpt in os.listdir('models'): <br>
     if 'checkpointLM1_epoch' in ckpt: <br>
     	os.remove(f'models/{ckpt}') <br>
@@ -52,8 +52,8 @@ Parameters: <br>
         os.mkdir(f'results/v1') <br>
         df.to_csv(f'results/v1/log_v1_FUNSD_{test_mode}_run{run}.csv', index = False) <br>
     
-    ** please follow this link to refer - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=JXsd7u37jPud&line=166&uniqifier=1  <br>
-
-#### Note:  
-    * Please refer to this link for demonstration- <br>
-    * https://drive.google.com/drive/u/2/folders/1ykGJ3fD29gJYMgkZIsBYMp4shtk28YKc <br>
+    * please follow this link to refer - https://colab.research.google.com/drive/1sn0xCIbuOEz6GgWo3lnhaMY-VNWHW-o8?authuser=2#scrollTo=JXsd7u37jPud&line=166&uniqifier=1  <br>
+    
+#### Note:  <br>
+  * Please refer to this link for demonstration- <br>
+  * https://drive.google.com/drive/u/2/folders/1ykGJ3fD29gJYMgkZIsBYMp4shtk28YKc <br>
